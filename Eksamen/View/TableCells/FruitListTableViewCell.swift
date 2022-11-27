@@ -9,9 +9,4 @@ class FruitListTableViewCell: UITableViewCell {
 }
 
 
-//Test headerName
-class HeaderCell: UITableViewCell {
-    @IBOutlet weak var headerName: UILabel!
-    
-}
 

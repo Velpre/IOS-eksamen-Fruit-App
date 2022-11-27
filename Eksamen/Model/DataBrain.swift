@@ -1,12 +1,9 @@
 import Foundation
-
+import CoreData
 class DataBrain{
     
     static var fruits = [Fruit]()
     
-    static var eatenFruit = [EatenFruit]()
-    static var dict = Dictionary(grouping: eatenFruit, by: {$0.date})
-
     func getAllUniqFamiles() -> [String]? {
         let array = DataBrain.fruits.map { obj in
             return obj.family
@@ -64,38 +61,23 @@ class DataBrain{
         return arrayToReturn
     }
     
-    
-//    func ceckMaster(){
-//
-//        for (key, value) in dict {
-//            print(key)
-//            for e in value {
-//                print(e.name)
-//            }
-//        }
-//    }
- 
-
-    
-    
-//    eatenFruit = [{
-//    name: "Apple",
-//    date: 2022-11-25 19:21:33 +0000,
-//    nutritions: {
-//        carbohydrates: 11.4,
-//        protein: 0.3,
-//        fat: 0.4,
-//        calories: 52.0,
-//        sugar: 10.3
-//    }
-//
-//}]
-    
+        
+    func saveEatenFruitToCoreData(name: String, date: String, protein: String, carbohydrates: String, fat: String, calories: String, sugar: String, context: NSManagedObjectContext){
+        let newItem = EatenFruitList(context: context)
+        newItem.name = name
+        newItem.date = date
+        newItem.protein = protein
+        newItem.fat = fat
+        newItem.carbohydrates = carbohydrates
+        newItem.calories = calories
+        newItem.sugar = sugar
+        do{
+            try context.save()
+        }
+        catch{
+            //showAlertWith(message: "Problem med lagring i CoreData")
+        }
+    }
     
 
-
-//    struct groupedEatenFruit:Codable{
-//        var dato
-//        var EatenFruit
-//    }
 }

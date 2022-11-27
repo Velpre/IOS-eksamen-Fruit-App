@@ -9,11 +9,6 @@ struct Fruit:Codable {
     var nutritions:Nutritions
 }
 
-struct EatenFruit{
-    var name:String
-    //var nutritions:Nutritions
-    var date: String
-}
 
 struct Nutritions:Codable {
     var carbohydrates:Float

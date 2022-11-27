@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F40395FC2932C354007A8CBE /* EatenFruitList+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40395FA2932C354007A8CBE /* EatenFruitList+CoreDataClass.swift */; };
+		F40395FD2932C354007A8CBE /* EatenFruitList+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40395FB2932C354007A8CBE /* EatenFruitList+CoreDataProperties.swift */; };
 		F45B9556292F03B400DB1841 /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45B9555292F03B400DB1841 /* ColorManager.swift */; };
 		F45B9558292FAFF200DB1841 /* FruitGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45B9557292FAFF200DB1841 /* FruitGroupViewController.swift */; };
 		F45B955B292FB0BE00DB1841 /* FruitCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45B955A292FB0BE00DB1841 /* FruitCategoryCell.swift */; };
@@ -33,6 +35,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F40395FA2932C354007A8CBE /* EatenFruitList+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EatenFruitList+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F40395FB2932C354007A8CBE /* EatenFruitList+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EatenFruitList+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F45B9555292F03B400DB1841 /* ColorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
 		F45B9557292FAFF200DB1841 /* FruitGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitGroupViewController.swift; sourceTree = "<group>"; };
 		F45B955A292FB0BE00DB1841 /* FruitCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitCategoryCell.swift; sourceTree = "<group>"; };
@@ -71,6 +75,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F40395F929327A07007A8CBE /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F4BAA557292EAD4C00628FD0 /* ApiManager.swift */,
+				F45B9555292F03B400DB1841 /* ColorManager.swift */,
+				F4BAA55C292ED41900628FD0 /* Extensions.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		F45B9559292FB06900DB1841 /* CollectionViewCells */ = {
 			isa = PBXGroup;
 			children = (
@@ -99,15 +113,13 @@
 			isa = PBXGroup;
 			children = (
 				F4BAA556292EA9EB00628FD0 /* Following Files */,
+				F4C431CD2932C8C400A2653E /* CoreData */,
+				F40395F929327A07007A8CBE /* Helpers */,
 				F4BAA559292EB0E300628FD0 /* Model */,
 				F4BAA55F292EDA0700628FD0 /* View */,
 				F4BAA55E292ED9C500628FD0 /* Controllers */,
 				F4BAA54B292EA9DD00628FD0 /* Assets.xcassets */,
 				F4BAA550292EA9DD00628FD0 /* Info.plist */,
-				F4BAA548292EA9DC00628FD0 /* Eksamen.xcdatamodeld */,
-				F4BAA557292EAD4C00628FD0 /* ApiManager.swift */,
-				F45B9555292F03B400DB1841 /* ColorManager.swift */,
-				F4BAA55C292ED41900628FD0 /* Extensions.swift */,
 			);
 			path = Eksamen;
 			sourceTree = "<group>";
@@ -164,6 +176,16 @@
 				F4E5C74F29322C16003E71CC /* EatenFruitTableViewCell.swift */,
 			);
 			path = TableCells;
+			sourceTree = "<group>";
+		};
+		F4C431CD2932C8C400A2653E /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				F40395FA2932C354007A8CBE /* EatenFruitList+CoreDataClass.swift */,
+				F40395FB2932C354007A8CBE /* EatenFruitList+CoreDataProperties.swift */,
+				F4BAA548292EA9DC00628FD0 /* Eksamen.xcdatamodeld */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F40395FD2932C354007A8CBE /* EatenFruitList+CoreDataProperties.swift in Sources */,
 				F4BAA562292EDA5800628FD0 /* FruitListTableViewCell.swift in Sources */,
 				F4BAA55B292EB0F000628FD0 /* Fruit.swift in Sources */,
 				F4E5C75029322C16003E71CC /* EatenFruitTableViewCell.swift in Sources */,
@@ -250,6 +273,7 @@
 				F4BAA566292EEC0400628FD0 /* FruitDetailTableViewCell.swift in Sources */,
 				F4BAA558292EAD4C00628FD0 /* ApiManager.swift in Sources */,
 				F4E5C74E29313943003E71CC /* LogViewController.swift in Sources */,
+				F40395FC2932C354007A8CBE /* EatenFruitList+CoreDataClass.swift in Sources */,
 				F45B955D292FB56600DB1841 /* DataBrain.swift in Sources */,
 				F4E5C74A2930F8E7003E71CC /* EatFruitViewController.swift in Sources */,
 				F45B955B292FB0BE00DB1841 /* FruitCategoryCell.swift in Sources */,

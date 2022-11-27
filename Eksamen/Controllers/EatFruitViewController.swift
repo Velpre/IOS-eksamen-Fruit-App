@@ -5,7 +5,9 @@ class EatFruitViewController: UIViewController {
     
     var fruit:Fruit!
     let datePicker = UIDatePicker()
-        
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    let dataBrain = DataBrain()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         addDatePicker()
@@ -31,12 +33,16 @@ class EatFruitViewController: UIViewController {
     @IBAction func eatFruitPressed(_ sender: UIButton) {
         if let safeFruit = fruit{
             let formatedDate = formatDate(date:datePicker.date)
-            let eatenFruit = EatenFruit(name: safeFruit.name, date: formatedDate)
-            DataBrain.eatenFruit.append(eatenFruit)
+            let protein = String(safeFruit.nutritions.protein)
+            let carbohydrates = String(safeFruit.nutritions.carbohydrates)
+            let fat = String(safeFruit.nutritions.fat)
+            let sugar = String(safeFruit.nutritions.sugar)
+            let calories = String(safeFruit.nutritions.calories)
+
+            dataBrain.saveEatenFruitToCoreData(name: safeFruit.name, date: formatedDate, protein: protein, carbohydrates: carbohydrates, fat: fat, calories: calories, sugar: sugar, context: context)
         }
         
-        let listFruitVC = self.storyboard?.instantiateViewController(identifier: "FruitListViewController") as! FruitListViewController
-        self.navigationController?.pushViewController(listFruitVC, animated: true)
+        let  vc =  self.navigationController?.popToRootViewController(animated: true)
     }
     
     @IBAction func cancelEatFruitPressed(_ sender: UIButton) {
@@ -44,4 +50,5 @@ class EatFruitViewController: UIViewController {
         detailVC.fruit = fruit
         self.navigationController?.pushViewController(detailVC, animated: true)
     }
+
 }

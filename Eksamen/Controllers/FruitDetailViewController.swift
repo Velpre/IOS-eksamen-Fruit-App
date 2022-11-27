@@ -63,7 +63,6 @@ class FruitDetailViewController: UIViewController {
 }
 
 extension FruitDetailViewController: UITableViewDataSource, UITableViewDelegate {
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return cellArray.count
     }

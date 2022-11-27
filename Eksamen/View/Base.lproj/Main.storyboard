@@ -29,6 +29,40 @@
             </objects>
             <point key="canvasLocation" x="-2662" y="173"/>
         </scene>
+        <!--Log-->
+        <scene sceneID="CTd-Ra-R7D">
+            <objects>
+                <navigationController id="dy0-h4-wvc" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Log" image="calendar" catalog="system" id="lwE-8v-ECl"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7OF-Le-pFW">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="KWM-cJ-GB7" kind="relationship" relationship="rootViewController" id="krX-0R-FMv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aha-pK-Gyx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2663" y="1027"/>
+        </scene>
+        <!--Groups-->
+        <scene sceneID="QUP-92-1A0">
+            <objects>
+                <navigationController id="LU3-5e-wnX" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Groups" image="book" catalog="system" id="ufc-Kn-2Uo"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iUV-ak-7tc">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Ypx-C2-Jeu" kind="relationship" relationship="rootViewController" id="yTo-7G-OgJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="afT-N5-coK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-702" y="320"/>
+        </scene>
         <!--Fruits-->
         <scene sceneID="brs-L4-hRY">
             <objects>
@@ -94,29 +128,6 @@
                                         <connections>
                                             <outlet property="fruitImage" destination="8Xx-P8-a8p" id="xiw-BD-lBa"/>
                                             <outlet property="fruitName" destination="9nc-H7-lBA" id="vCT-9O-Kb9"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HeaderCell" id="GVJ-wv-EpZ" customClass="HeaderCell" customModule="Eksamen" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="110" width="393" height="60"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GVJ-wv-EpZ" id="8xo-BG-0Qq">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="60"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yz7-8v-f0N">
-                                                    <rect key="frame" x="176" y="20" width="41.333333333333343" height="20.333333333333329"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="Yz7-8v-f0N" firstAttribute="centerX" secondItem="8xo-BG-0Qq" secondAttribute="centerX" id="Lbe-Ln-vRk"/>
-                                                <constraint firstItem="Yz7-8v-f0N" firstAttribute="centerY" secondItem="8xo-BG-0Qq" secondAttribute="centerY" id="rZy-CE-UUp"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="headerName" destination="Yz7-8v-f0N" id="I2m-Mi-bEd"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -313,23 +324,6 @@
             <point key="canvasLocation" x="2341.2213740458014" y="-391.54929577464793"/>
         </scene>
         <!--Groups-->
-        <scene sceneID="QUP-92-1A0">
-            <objects>
-                <navigationController id="LU3-5e-wnX" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Groups" image="book" catalog="system" id="ufc-Kn-2Uo"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iUV-ak-7tc">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="Ypx-C2-Jeu" kind="relationship" relationship="rootViewController" id="yTo-7G-OgJ"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="afT-N5-coK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-702" y="320"/>
-        </scene>
-        <!--Groups-->
         <scene sceneID="kBd-UU-2AV">
             <objects>
                 <viewController storyboardIdentifier="HeaderView" id="Ypx-C2-Jeu" customClass="FruitGroupViewController" customModule="Eksamen" customModuleProvider="target" sceneMemberID="viewController">
@@ -392,23 +386,6 @@
             </objects>
             <point key="canvasLocation" x="264.8854961832061" y="319.71830985915494"/>
         </scene>
-        <!--Log-->
-        <scene sceneID="CTd-Ra-R7D">
-            <objects>
-                <navigationController id="dy0-h4-wvc" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Log" image="calendar" catalog="system" id="lwE-8v-ECl"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7OF-Le-pFW">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="KWM-cJ-GB7" kind="relationship" relationship="rootViewController" id="krX-0R-FMv"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aha-pK-Gyx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1161" y="1025"/>
-        </scene>
         <!--Log View Controller-->
         <scene sceneID="KdU-vY-dex">
             <objects>
@@ -417,12 +394,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="FeE-D2-FnP">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="FeE-D2-FnP">
                                 <rect key="frame" x="0.0" y="103" width="393" height="666"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="EatenFruitTableViewCell" id="E6K-Sp-oVL" customClass="EatenFruitTableViewCell" customModule="Eksamen" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="55.333332061767578" width="393" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="E6K-Sp-oVL" id="LjM-qa-2PI">
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
@@ -444,6 +421,30 @@
                                             <outlet property="eatenFruitName" destination="mAi-Fa-Tzx" id="wly-bh-aNJ"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FooterCell" id="4jT-IY-wRR" customClass="FooterCell" customModule="Eksamen" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="99" width="393" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4jT-IY-wRR" id="4Lq-wP-Gls">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dRR-kE-F0i">
+                                                    <rect key="frame" x="36" y="11.666666666666666" width="321" height="20.333333333333336"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="dRR-kE-F0i" secondAttribute="trailing" constant="16" id="2gb-a1-xBs"/>
+                                                <constraint firstItem="dRR-kE-F0i" firstAttribute="leading" secondItem="4Lq-wP-Gls" secondAttribute="leadingMargin" constant="16" id="Id9-bv-Hjd"/>
+                                                <constraint firstItem="dRR-kE-F0i" firstAttribute="centerY" secondItem="4Lq-wP-Gls" secondAttribute="centerY" id="zYS-i7-h4X"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="eatenFruitFooter" destination="dRR-kE-F0i" id="auG-N2-Tud"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
@@ -463,7 +464,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pet-Cy-xOF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1676" y="320"/>
+            <point key="canvasLocation" x="-1636" y="1027"/>
         </scene>
     </scenes>
     <resources>

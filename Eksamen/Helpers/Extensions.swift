@@ -5,8 +5,8 @@ import UIKit
 extension UIViewController {
     
     //Alert Message showing errors to user
-    func showAlertWith(message: String , style: UIAlertController.Style = .alert) {
-        let alertController = UIAlertController(title: "Error", message: message, preferredStyle: style)
+    func showAlertWith(message: String , style: UIAlertController.Style = .alert, title:String = "Error") {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: style)
         let action = UIAlertAction(title: "Ok", style: .default)
         alertController.addAction(action)
         self.present(alertController, animated: true, completion: nil)
