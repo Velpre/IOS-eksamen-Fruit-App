@@ -17,6 +17,7 @@ class FruitListViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         loadFruitsFromServer()
+        
     }
     
     func loadFruitsFromServer (){
@@ -33,14 +34,10 @@ class FruitListViewController: UIViewController {
                     return object1.id < object2.id
                 })
             }
-        
             DispatchQueue.main.async {
-         
                 self.tableView.reloadData()
-                //Kaller på methoden som angir randome farger
                 self.colorManager.addColorToFamilies(fruitArray: self.fruitList)
-                //Sender data til dataBrain klassen
-                DataBrain.fruits = self.fruitList
+                FruitDataBrain.fruits = self.fruitList
             }
         }
     }
@@ -59,7 +56,6 @@ extension FruitListViewController: UITableViewDataSource, UITableViewDelegate {
         return fruitList.count
     }
 
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FruitListTableViewCell") as! FruitListTableViewCell
         let fruit = fruitList[indexPath.row]

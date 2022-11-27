@@ -5,8 +5,7 @@ class EatFruitViewController: UIViewController {
     
     var fruit:Fruit!
     let datePicker = UIDatePicker()
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    let dataBrain = DataBrain()
+    let dataBrain = EatenFruitDataBrain()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,14 +31,17 @@ class EatFruitViewController: UIViewController {
     
     @IBAction func eatFruitPressed(_ sender: UIButton) {
         if let safeFruit = fruit{
+            
             let formatedDate = formatDate(date:datePicker.date)
+            print()
+            
             let protein = String(safeFruit.nutritions.protein)
             let carbohydrates = String(safeFruit.nutritions.carbohydrates)
             let fat = String(safeFruit.nutritions.fat)
             let sugar = String(safeFruit.nutritions.sugar)
             let calories = String(safeFruit.nutritions.calories)
 
-            dataBrain.saveEatenFruitToCoreData(name: safeFruit.name, date: formatedDate, protein: protein, carbohydrates: carbohydrates, fat: fat, calories: calories, sugar: sugar, context: context)
+            dataBrain.saveEatenFruitToCoreData(name: safeFruit.name, date: formatedDate, protein: protein, carbohydrates: carbohydrates, fat: fat, calories: calories, sugar: sugar)
         }
         
         let  vc =  self.navigationController?.popToRootViewController(animated: true)
@@ -50,5 +52,4 @@ class EatFruitViewController: UIViewController {
         detailVC.fruit = fruit
         self.navigationController?.pushViewController(detailVC, animated: true)
     }
-
 }

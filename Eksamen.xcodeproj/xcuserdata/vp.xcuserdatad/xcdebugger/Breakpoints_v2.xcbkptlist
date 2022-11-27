@@ -3,4 +3,99 @@
    uuid = "1EAB0B60-22AB-43E8-A2BD-2019E0A16B12"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8F0F29F5-6BB2-4E83-A44E-36CD9ACD4CA6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Eksamen/Model/DataBrain.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "4"
+            endingLineNumber = "4"
+            landmarkName = "DataBrain"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "8F0F29F5-6BB2-4E83-A44E-36CD9ACD4CA6 - 5af50768d34fed9b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Eksamen.DataBrain.__allocating_init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Eksamen.DataBrain"
+                  moduleName = "Eksamen"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vp/Documents/Code/IOS/Eksamen/Eksamen/Model/DataBrain.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  uuid = "8F0F29F5-6BB2-4E83-A44E-36CD9ACD4CA6 - afb53b86922b1ee8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Eksamen.DataBrain.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Eksamen.DataBrain"
+                  moduleName = "Eksamen"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vp/Documents/Code/IOS/Eksamen/Eksamen/Model/DataBrain.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "4"
+                  endingLineNumber = "4"
+                  offsetFromSymbolStart = "256">
+               </Location>
+               <Location
+                  uuid = "8F0F29F5-6BB2-4E83-A44E-36CD9ACD4CA6 - babf258dc8d6f7fd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Eksamen.DataBrain.__allocating_init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Eksamen.DataBrain&gt;"
+                  moduleName = "Eksamen"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vp/Documents/Code/IOS/Eksamen/Eksamen/Model/DataBrain.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "8F0F29F5-6BB2-4E83-A44E-36CD9ACD4CA6 - 54f1299eaa8759c1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Eksamen.DataBrain.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Eksamen.DataBrain&gt;"
+                  moduleName = "Eksamen"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vp/Documents/Code/IOS/Eksamen/Eksamen/Model/DataBrain.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "4"
+                  endingLineNumber = "4"
+                  offsetFromSymbolStart = "152">
+               </Location>
+               <Location
+                  uuid = "8F0F29F5-6BB2-4E83-A44E-36CD9ACD4CA6 - d95fb6e7e85b897"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Eksamen.DataBrain.__deallocating_deinit"
+                  moduleName = "Eksamen"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vp/Documents/Code/IOS/Eksamen/Eksamen/Model/DataBrain.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

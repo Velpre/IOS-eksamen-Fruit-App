@@ -4,7 +4,7 @@ class FruitGroupViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var dataBrain = DataBrain()
+    var dataBrain = FruitDataBrain()
     var apiManager = ApiManager()
     //Storage of data for GroupViewController
     var sectionArray:[SectionData] = []

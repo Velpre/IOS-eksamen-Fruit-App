@@ -1,11 +1,10 @@
-import Foundation
-import CoreData
-class DataBrain{
-    
+class FruitDataBrain{
+
+    //Data fetched when FruitListVC is loaded
     static var fruits = [Fruit]()
     
     func getAllUniqFamiles() -> [String]? {
-        let array = DataBrain.fruits.map { obj in
+        let array = FruitDataBrain.fruits.map { obj in
             return obj.family
         }
         
@@ -16,7 +15,7 @@ class DataBrain{
     }
     
     func getAllUniqOrder() -> [String]? {
-        let array = DataBrain.fruits.map { obj in
+        let array = FruitDataBrain.fruits.map { obj in
             return obj.order
         }
         
@@ -27,7 +26,7 @@ class DataBrain{
     }
     
     func getAllUniqGenus() -> [String]? {
-        let array = DataBrain.fruits.map { obj in
+        let array = FruitDataBrain.fruits.map { obj in
             return obj.genus
         }
         
@@ -61,23 +60,4 @@ class DataBrain{
         return arrayToReturn
     }
     
-        
-    func saveEatenFruitToCoreData(name: String, date: String, protein: String, carbohydrates: String, fat: String, calories: String, sugar: String, context: NSManagedObjectContext){
-        let newItem = EatenFruitList(context: context)
-        newItem.name = name
-        newItem.date = date
-        newItem.protein = protein
-        newItem.fat = fat
-        newItem.carbohydrates = carbohydrates
-        newItem.calories = calories
-        newItem.sugar = sugar
-        do{
-            try context.save()
-        }
-        catch{
-            //showAlertWith(message: "Problem med lagring i CoreData")
-        }
-    }
-    
-
 }

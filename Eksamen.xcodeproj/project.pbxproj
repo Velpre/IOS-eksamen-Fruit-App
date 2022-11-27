@@ -12,7 +12,7 @@
 		F45B9556292F03B400DB1841 /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45B9555292F03B400DB1841 /* ColorManager.swift */; };
 		F45B9558292FAFF200DB1841 /* FruitGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45B9557292FAFF200DB1841 /* FruitGroupViewController.swift */; };
 		F45B955B292FB0BE00DB1841 /* FruitCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45B955A292FB0BE00DB1841 /* FruitCategoryCell.swift */; };
-		F45B955D292FB56600DB1841 /* DataBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45B955C292FB56600DB1841 /* DataBrain.swift */; };
+		F45B955D292FB56600DB1841 /* FruitDataBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45B955C292FB56600DB1841 /* FruitDataBrain.swift */; };
 		F45B955F292FCC8100DB1841 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45B955E292FCC8100DB1841 /* Group.swift */; };
 		F47C1EF929324807002F0E8F /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47C1EF829324807002F0E8F /* HeaderView.swift */; };
 		F47C1EFD29324B59002F0E8F /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F47C1EFC29324B59002F0E8F /* HeaderView.xib */; };
@@ -29,6 +29,7 @@
 		F4BAA562292EDA5800628FD0 /* FruitListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BAA561292EDA5800628FD0 /* FruitListTableViewCell.swift */; };
 		F4BAA564292EE67500628FD0 /* FruitDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BAA563292EE67500628FD0 /* FruitDetailViewController.swift */; };
 		F4BAA566292EEC0400628FD0 /* FruitDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BAA565292EEC0400628FD0 /* FruitDetailTableViewCell.swift */; };
+		F4C431CF2933C8BD00A2653E /* EatenFruitDataBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C431CE2933C8BD00A2653E /* EatenFruitDataBrain.swift */; };
 		F4E5C74A2930F8E7003E71CC /* EatFruitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E5C7492930F8E7003E71CC /* EatFruitViewController.swift */; };
 		F4E5C74E29313943003E71CC /* LogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E5C74D29313943003E71CC /* LogViewController.swift */; };
 		F4E5C75029322C16003E71CC /* EatenFruitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E5C74F29322C16003E71CC /* EatenFruitTableViewCell.swift */; };
@@ -40,7 +41,7 @@
 		F45B9555292F03B400DB1841 /* ColorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
 		F45B9557292FAFF200DB1841 /* FruitGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitGroupViewController.swift; sourceTree = "<group>"; };
 		F45B955A292FB0BE00DB1841 /* FruitCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitCategoryCell.swift; sourceTree = "<group>"; };
-		F45B955C292FB56600DB1841 /* DataBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBrain.swift; sourceTree = "<group>"; };
+		F45B955C292FB56600DB1841 /* FruitDataBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitDataBrain.swift; sourceTree = "<group>"; };
 		F45B955E292FCC8100DB1841 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		F47C1EF829324807002F0E8F /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		F47C1EFC29324B59002F0E8F /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
@@ -59,6 +60,7 @@
 		F4BAA561292EDA5800628FD0 /* FruitListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitListTableViewCell.swift; sourceTree = "<group>"; };
 		F4BAA563292EE67500628FD0 /* FruitDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitDetailViewController.swift; sourceTree = "<group>"; };
 		F4BAA565292EEC0400628FD0 /* FruitDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitDetailTableViewCell.swift; sourceTree = "<group>"; };
+		F4C431CE2933C8BD00A2653E /* EatenFruitDataBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EatenFruitDataBrain.swift; sourceTree = "<group>"; };
 		F4E5C7492930F8E7003E71CC /* EatFruitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EatFruitViewController.swift; sourceTree = "<group>"; };
 		F4E5C74D29313943003E71CC /* LogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogViewController.swift; sourceTree = "<group>"; };
 		F4E5C74F29322C16003E71CC /* EatenFruitTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EatenFruitTableViewCell.swift; sourceTree = "<group>"; };
@@ -136,7 +138,8 @@
 		F4BAA559292EB0E300628FD0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				F45B955C292FB56600DB1841 /* DataBrain.swift */,
+				F45B955C292FB56600DB1841 /* FruitDataBrain.swift */,
+				F4C431CE2933C8BD00A2653E /* EatenFruitDataBrain.swift */,
 				F4BAA55A292EB0F000628FD0 /* Fruit.swift */,
 				F45B955E292FCC8100DB1841 /* Group.swift */,
 			);
@@ -269,12 +272,13 @@
 				F4BAA54A292EA9DC00628FD0 /* Eksamen.xcdatamodeld in Sources */,
 				F47C1EF929324807002F0E8F /* HeaderView.swift in Sources */,
 				F45B9556292F03B400DB1841 /* ColorManager.swift in Sources */,
+				F4C431CF2933C8BD00A2653E /* EatenFruitDataBrain.swift in Sources */,
 				F4BAA544292EA9DC00628FD0 /* FruitListViewController.swift in Sources */,
 				F4BAA566292EEC0400628FD0 /* FruitDetailTableViewCell.swift in Sources */,
 				F4BAA558292EAD4C00628FD0 /* ApiManager.swift in Sources */,
 				F4E5C74E29313943003E71CC /* LogViewController.swift in Sources */,
 				F40395FC2932C354007A8CBE /* EatenFruitList+CoreDataClass.swift in Sources */,
-				F45B955D292FB56600DB1841 /* DataBrain.swift in Sources */,
+				F45B955D292FB56600DB1841 /* FruitDataBrain.swift in Sources */,
 				F4E5C74A2930F8E7003E71CC /* EatFruitViewController.swift in Sources */,
 				F45B955B292FB0BE00DB1841 /* FruitCategoryCell.swift in Sources */,
 				F4BAA540292EA9DC00628FD0 /* AppDelegate.swift in Sources */,

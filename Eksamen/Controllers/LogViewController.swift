@@ -1,13 +1,11 @@
 
 import UIKit
 class LogViewController: UIViewController {
+    var dataBrain = EatenFruitDataBrain()
     var data = [String?: [EatenFruitList]]()
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var nutritionsResult = [[String]]()
 
-    
     @IBOutlet weak var tableView: UITableView!
-
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,82 +15,16 @@ class LogViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
         DispatchQueue.main.async { [self] in
-            self.getAllEatenFruitFromCoreData()
-            calculateNutritions()
+            data = dataBrain.getEatenFruit()
+            nutritionsResult = dataBrain.getNutritions()
             tableView.reloadData()
             if data.count == 0 {
                 showAlertWith(message: "Du har ikke spist frukt ennå", title: "Info")
             }
         }
         nutritionsResult = []
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        
-        //reseting all nutrition properties
-        protein = 0.0
-    }
-    
-    func getAllEatenFruitFromCoreData(){
-        do{
-            let model = try context.fetch(EatenFruitList.fetchRequest())
-            data = Dictionary(grouping: model, by: {$0.date})
-        }
-        catch{
-            showAlertWith(message: "Problem med CoreData", title: "Info")
-        }
-    }
-    
-    
-
-    var calories: Float = 0.0
-    var carb: Float = 0.0
-    var fat: Float = 0.0
-    var protein: Float = 0.0
-    var sugar: Float = 0.0
-    
-    func resetNutritions(){
-        calories = 0.0
-        carb = 0.0
-        fat = 0.0
-        protein = 0.0
-        sugar = 0.0
-    }
-
-    func calculateNutritions(){
-
-        for(key, value) in data {
-          
-            for (e) in value{
-                
-                if let e = e.calories{
-                    calories += Float(e)!
-                }
-                if let e = e.carbohydrates{
-                    carb += Float(e)!
-                }
-                if let e = e.fat{
-                    fat += Float(e)!
-                }
-                if let e = e.protein{
-                    protein += Float(e)!
-                }
-                if let e = e.sugar{
-                    sugar += Float(e)!
-                }
-            }
-            
-            nutritionsResult.append([
-                String(format: "%.1f", calories),
-                String(format: "%.1f", carb),
-                String(format: "%.1f", fat),
-                String(format: "%.1f", protein),
-                String(format: "%.1f", sugar)
-            ])
-            resetNutritions()
-        }
+        dataBrain.nutritionsResult = []
     }
 }
 
