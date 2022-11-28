@@ -4,26 +4,34 @@ import UIKit
 class FruitDetailViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var warningLabel: UILabel!
+    var eatenFruitDataBrain = EatenFruitDataBrain()
     
     var cellArray = [CellType]()
     var fruit:Fruit!
     var timer:Timer?
     var fruitAnimationColor:UIColor = .white
 
-    
     override func viewDidLoad(){
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
         self.title = fruit.name.capitalized
         cellArray = [.name, .id, .family, .order, .genus, .carbohydrates, .protein, .fat, .calories, .sugar]
-        
         if fruit.nutritions.sugar > 10 {
-            warningLabel.isHidden = false
-            fireTimer()
+        warningLabel.isHidden = false
+        fireTimer()
         } else {
-            warningLabel.isHidden = true
+        warningLabel.isHidden = true
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+//        if fruit.nutritions.sugar > 10 {
+//        warningLabel.isHidden = false
+//        fireTimer()
+//    } else {
+//        warningLabel.isHidden = true
+//    }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -44,7 +52,6 @@ class FruitDetailViewController: UIViewController {
             } else if fruitAnimationColor == .red {
                 fruitAnimationColor  = .white
             }
-        
         UIView.transition(with: self.view,
                           duration: 0.3,
                           animations: {
@@ -53,12 +60,20 @@ class FruitDetailViewController: UIViewController {
         completion: nil)
     }
     
-    
-    
     @IBAction func eatFruitPressed(_ sender: UIButton) {
         let eatVC = self.storyboard?.instantiateViewController(identifier: "EatFruitViewController") as! EatFruitViewController
         eatVC.fruit = fruit
         self.navigationController?.pushViewController(eatVC, animated: true)
+    }
+
+    
+    //Make rain of eaten fruits
+    @IBAction func rainButtonPressed(_ sender: UIButton) {
+        //Checking how many fruits of this type was eaten last 30 days
+        let numberOfFruit = eatenFruitDataBrain.calculateNumberOfFruitEatenLast30Days(fruitName: fruit.name)
+        
+        
+        print(numberOfFruit)
     }
 }
 
@@ -69,7 +84,7 @@ extension FruitDetailViewController: UITableViewDataSource, UITableViewDelegate 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FruitDetailTableViewCell") as! FruitDetailTableViewCell
-
+        
         let cellType = cellArray[indexPath.row]
         cell.selectionStyle = .none
 

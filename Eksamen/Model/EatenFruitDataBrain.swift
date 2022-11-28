@@ -4,6 +4,7 @@ class EatenFruitDataBrain: UIViewController{
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
    
     var data = [String?: [EatenFruitList]]()
+    var model = [EatenFruitList]()
     var nutritionsResult = [[String]]()
     
     var calories: Float = 0.0
@@ -11,6 +12,8 @@ class EatenFruitDataBrain: UIViewController{
     var fat: Float = 0.0
     var protein: Float = 0.0
     var sugar: Float = 0.0
+    
+    var numberOfFruitEatenlast30Days = 0
 
     func saveEatenFruitToCoreData(name: String, date: String, protein: String, carbohydrates: String, fat: String, calories: String, sugar: String){
         let newItem = EatenFruitList(context: context)
@@ -31,7 +34,7 @@ class EatenFruitDataBrain: UIViewController{
     
     func fetchEatenFruitFromCoreData(){
         do{
-            let model = try context.fetch(EatenFruitList.fetchRequest())
+            model = try context.fetch(EatenFruitList.fetchRequest())
             data = Dictionary(grouping: model, by: {$0.date})
         }
         catch{
@@ -40,7 +43,7 @@ class EatenFruitDataBrain: UIViewController{
     }
     
     func calculateNutritions(){
-        for(key, value) in data {
+        for(_, value) in data {
             for (e) in value{
                 if let e = e.calories{
                     calories += Float(e)!
@@ -83,8 +86,42 @@ class EatenFruitDataBrain: UIViewController{
         return nutritionsResult
     }
     
-    func getEatenFruit()->[String?: [EatenFruitList]]{
+    
+    func getEatenFruitGroupedByDate()->[String?: [EatenFruitList]]{
         fetchEatenFruitFromCoreData()
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MM-dd-yyyy"
+        
         return data
+    }
+    
+    func getEatenFruit()->[EatenFruitList]{
+        fetchEatenFruitFromCoreData()
+        return model
+    }
+    
+    
+    func fromStringToDate(date:String)->Date{
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd MMMM yyyy"
+        return formatter.date(from: date)!
+    }
+    
+    func calculateNumberOfFruitEatenLast30Days(fruitName: String) -> Int{
+        numberOfFruitEatenlast30Days = 0
+        let allFruits: [EatenFruitList] = getEatenFruit()
+        let currentDate = Date()
+        let thirtyDaysBefore = Calendar.current.date(byAdding: .day, value: -30, to: currentDate)
+        
+        for eatenFruit in allFruits {
+            if eatenFruit.name == fruitName{
+                let fruitDate = fromStringToDate(date:eatenFruit.date!)
+                if thirtyDaysBefore! < fruitDate{
+                    numberOfFruitEatenlast30Days += 1
+                }
+            }
+        }
+        return numberOfFruitEatenlast30Days
     }
 }

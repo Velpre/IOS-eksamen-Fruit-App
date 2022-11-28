@@ -16,7 +16,6 @@ class EatFruitViewController: UIViewController {
         datePicker.datePickerMode = .dateAndTime
         datePicker.preferredDatePickerStyle = .compact
         datePicker.locale = .current
-        datePicker.minimumDate = Date()
         view.addSubview(datePicker)
         datePicker.center = view.center
     }

@@ -171,16 +171,38 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rhH-pJ-wLN">
-                                                <rect key="frame" x="93.000000000000014" y="35.666666666666671" width="167.33333333333337" height="34.333333333333329"/>
-                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Spis denne frukten"/>
-                                                <connections>
-                                                    <action selector="eatFruitPressed:" destination="Yid-Ma-Vj0" eventType="touchUpInside" id="o5q-lA-dQ4"/>
-                                                </connections>
-                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="D01-rh-Gyu">
+                                                <rect key="frame" x="10" y="35.666666666666671" width="333" height="34.333333333333329"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rhH-pJ-wLN">
+                                                        <rect key="frame" x="0.0" y="0.0" width="162.66666666666666" height="34.333333333333336"/>
+                                                        <color key="backgroundColor" red="0.14901961389999999" green="0.2588235438" blue="0.27843138579999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" image="fork.knife" catalog="system">
+                                                            <color key="baseForegroundColor" red="0.55686277149999996" green="0.1607843041" blue="0.14509806040000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="eatFruitPressed:" destination="Yid-Ma-Vj0" eventType="touchUpInside" id="o5q-lA-dQ4"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rr5-Mm-NZ4">
+                                                        <rect key="frame" x="170.66666666666663" y="0.0" width="162.33333333333337" height="34.333333333333336"/>
+                                                        <color key="backgroundColor" red="0.14901961389999999" green="0.2588235438" blue="0.27843138579999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" image="cloud.rain.fill" catalog="system">
+                                                            <color key="baseForegroundColor" red="0.55686277149999996" green="0.1607843041" blue="0.14509806040000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="rainButtonPressed:" destination="Yid-Ma-Vj0" eventType="touchUpInside" id="8Hf-qM-l83"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="D01-rh-Gyu" firstAttribute="leading" secondItem="6aZ-G4-Uag" secondAttribute="leading" constant="10" id="XBq-Vu-9Xn"/>
+                                            <constraint firstAttribute="trailing" secondItem="D01-rh-Gyu" secondAttribute="trailing" constant="10" id="d4o-iH-o4F"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -280,23 +302,27 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="0JC-UM-A8H">
-                                        <rect key="frame" x="73.333333333333329" y="624.66666666666663" width="246.66666666666669" height="34.333333333333371"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="0JC-UM-A8H">
+                                        <rect key="frame" x="50" y="624.66666666666663" width="293" height="34.333333333333371"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hmj-SR-X9O">
-                                                <rect key="frame" x="0.0" y="0.0" width="73.333333333333329" height="34.333333333333336"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="121.66666666666667" height="34.333333333333336"/>
                                                 <color key="backgroundColor" red="0.14901961389999999" green="0.2588235438" blue="0.27843138579999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Spis"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="fork.knife" catalog="system">
+                                                    <color key="baseForegroundColor" red="0.55686277149999996" green="0.1607843041" blue="0.14509806040000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </buttonConfiguration>
                                                 <connections>
                                                     <action selector="eatFruitPressed:" destination="jkU-93-YGJ" eventType="touchUpInside" id="mZq-OD-eg1"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EAL-ym-pQa">
-                                                <rect key="frame" x="173.33333333333331" y="0.0" width="73.333333333333314" height="34.333333333333336"/>
+                                                <rect key="frame" x="171.66666666666666" y="0.0" width="121.33333333333334" height="34.333333333333336"/>
                                                 <color key="backgroundColor" red="0.14901961389999999" green="0.2588235438" blue="0.27843138579999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Avbryt"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="arrow.backward" catalog="system">
+                                                    <color key="baseForegroundColor" red="0.55686277149999996" green="0.1607843041" blue="0.14509806040000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </buttonConfiguration>
                                                 <connections>
                                                     <action selector="cancelEatFruitPressed:" destination="jkU-93-YGJ" eventType="touchUpInside" id="eXx-2C-MBr"/>
                                                 </connections>
@@ -307,6 +333,10 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="0JC-UM-A8H" firstAttribute="leading" secondItem="TFe-bc-fD9" secondAttribute="leading" constant="50" id="5CD-IP-8A3"/>
+                                    <constraint firstAttribute="trailing" secondItem="0JC-UM-A8H" secondAttribute="trailing" constant="50" id="nN0-sG-CEo"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9xV-iS-y4q"/>
@@ -428,7 +458,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dRR-kE-F0i">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dRR-kE-F0i">
                                                     <rect key="frame" x="36" y="11.666666666666666" width="321" height="20.333333333333336"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -468,8 +498,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.backward" catalog="system" width="128" height="95"/>
         <image name="book" catalog="system" width="128" height="99"/>
         <image name="calendar" catalog="system" width="128" height="107"/>
+        <image name="cloud.rain.fill" catalog="system" width="126" height="128"/>
+        <image name="fork.knife" catalog="system" width="94" height="128"/>
         <image name="tree.fill" catalog="system" width="128" height="118"/>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

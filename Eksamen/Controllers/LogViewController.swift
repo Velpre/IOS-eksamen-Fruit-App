@@ -16,7 +16,7 @@ class LogViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         DispatchQueue.main.async { [self] in
-            data = dataBrain.getEatenFruit()
+            data = dataBrain.getEatenFruitGroupedByDate()
             nutritionsResult = dataBrain.getNutritions()
             tableView.reloadData()
             if data.count == 0 {
@@ -57,7 +57,7 @@ extension LogViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FooterCell") as! FooterCell
-        cell.eatenFruitFooter.text = "Calories:\(nutritionsResult[section][0]) Carb:\(nutritionsResult[section][1]) Fat:\(nutritionsResult[section][2]) Protein:\(nutritionsResult[section][3])  Sugar:\(nutritionsResult[section][4])"
+        cell.eatenFruitFooter.text = "Calories:\(nutritionsResult[section][0])     Carb:\(nutritionsResult[section][1])     Fat:\(nutritionsResult[section][2])     Protein:\(nutritionsResult[section][3])     Sugar:\(nutritionsResult[section][4])"
         return cell
     }
     
